@@ -1,0 +1,7 @@
+INSERT INTO dish (user_name, name_dish, type_dish, chef_name) VALUES
+('jdoe', 'Spaghetti Carbonara', 1, 'Chef Ramsey'),
+('asmith', 'Caesar Salad', 2, 'Chef Oliver'),
+('mjones', 'Chocolate Cake', 3, 'Chef Pierre'),
+('lbrown', 'Bruschetta', 4, 'Chef Sophia'),
+('dwhite', 'Grilled Vegetables', 5, 'Chef Marcus'),
+('rblack', 'Stuffed Mushrooms', 4, 'Chef Emma');

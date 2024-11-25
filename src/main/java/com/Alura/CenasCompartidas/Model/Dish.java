@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity
+@Entity(name = "dish")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,8 +19,8 @@ public class Dish {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long idDish;
 private String userName;
-private String NameDish;
-private TypeDish TypeDish;
+private String nameDish;
+private TypeDish typeDish;
 private String chefName;
 
 }
