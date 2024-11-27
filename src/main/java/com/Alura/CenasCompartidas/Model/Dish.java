@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.springframework.validation.annotation.Validated;
 
 @Entity(name = "dish")
 @Data
@@ -22,5 +24,4 @@ private String userName;
 private String nameDish;
 private TypeDish typeDish;
 private String chefName;
-
 }
