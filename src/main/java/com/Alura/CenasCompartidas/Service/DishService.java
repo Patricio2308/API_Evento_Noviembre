@@ -33,10 +33,10 @@ public class DishService implements IDishService{
     }
     @Override
     @Transactional
-    public Dish updateDish(Long id, Dish dish) {
+    public Dish updateDish(Long id, Dish dish) throws Exception{
         Optional<Dish> dishOptional = dishRepository.findById(id);
         if(dishOptional.isEmpty()){
-            throw new RuntimeException("El platillo de id "+ id +" no fue encontrado");
+            throw new Exception("El platillo de id "+ id +" no fue encontrado");
         }
         Dish dishToUpdate = dishOptional.get();
         dishToUpdate.setNameDish(dish.getNameDish());
@@ -46,4 +46,14 @@ public class DishService implements IDishService{
 
         return dishRepository.save(dishToUpdate);
     }
+
+    @Override
+    public void delete(Long id) throws Exception{
+        Optional<Dish> existingDish = dishRepository.findById(id);
+        if(existingDish.isEmpty()){
+            throw new Exception("El platillo de id "+ id +" no fue encontrado");
+        }
+        dishRepository.deleteById(id);
+    }
+
 }

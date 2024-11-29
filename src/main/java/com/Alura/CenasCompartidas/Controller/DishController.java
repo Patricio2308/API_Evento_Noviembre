@@ -50,4 +50,14 @@ public class DishController {
             return ResponseEntity.internalServerError().build();
         }
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteDish(@PathVariable Long id) {
+        try {
+            dishService.delete(id);
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            return  ResponseEntity.internalServerError().build();
+        }
+    }
 }
